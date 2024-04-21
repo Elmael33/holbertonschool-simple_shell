@@ -4,8 +4,14 @@
 
 int main(void)
 {
-	
-	prompt();
+	while(1)
+	{
+		char **argv;
+		prompt();
+		argv = read_line();
+		execute_command(argv);
+	}
+	return (0);
 
 
 

@@ -2,7 +2,7 @@
 
 
 
-char **getinput(void)
+char **read_line(void)
 {
 	char *buffer;
 	char *token;

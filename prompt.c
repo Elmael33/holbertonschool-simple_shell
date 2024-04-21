@@ -5,9 +5,6 @@
 
 void prompt(void)
 {
-	while(1)
-	{
-		printf("($) ");
-	}
+	printf("($) ");
 }
 

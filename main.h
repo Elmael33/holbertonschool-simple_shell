@@ -7,8 +7,8 @@
 #include <sys/wait.h>
 
 void prompt(void);
-char **getinput(void);
-void execute(const char* command);
+char **read_line(void);
+void execute_command(char **argv);
 
 
 
