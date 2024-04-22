@@ -23,7 +23,12 @@ char **read_line(void)
 		exit(1);
 	}
 	argv = malloc(sizeof(char *) * 2);
-
+	if (argv == NULL)
+	{
+		free(argv);
+		perror("malloc");
+		exit(1);
+	}
 	i = 0;
 	token = strtok(buffer, delim);
 	while (token != NULL)
@@ -32,6 +37,7 @@ char **read_line(void)
 		token = strtok(NULL, delim);
 		i++;
 	}
+	argv[i] = NULL;
 	return (argv);
 }
 
