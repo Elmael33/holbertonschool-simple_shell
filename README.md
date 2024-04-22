@@ -10,7 +10,7 @@ This project from Holberton School is to develop our own shell that enhances use
 * Handle command lines with arguments
 * Handle the PATH
 * Implement the exit built-in, that exits the shell
-* Implement the env built-in, that prints the current environment
+* Implement the env built-in, that prints the current environmen
 
 ## Prototypes
 * ```void prompt(void)``` display the prompt
