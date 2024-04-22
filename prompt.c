@@ -1,5 +1,7 @@
 #include "main.h"
-
+/**
+ * prompt - displays the prompt
+ */
 
 
 
