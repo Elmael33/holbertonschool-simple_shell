@@ -20,6 +20,12 @@ char **read_line(void)
 
 	i = 0;
 	token = strtok(buffer, delim);
+	if (token == NULL)
+	{
+		argv[i] = buffer;
+		argv[i + 1] = NULL;
+		return (argv);
+	}
 	while (token != NULL)
 	{
 		argv[i] = token;
