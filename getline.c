@@ -6,7 +6,7 @@ char **read_line(void)
 {
 	char *buffer;
 	char *token;
-	const char* delim = " \n";
+	const char* delim = "\n";
 	size_t size = 0;
 	char **argv;
 	int i = 0;
@@ -16,15 +16,7 @@ char **read_line(void)
 	{
 		exit(-1);
 	}
-	token = strtok(buffer, delim);
-
-	while (token != NULL)
-	{
-		token = strtok(NULL, delim);
-		i++;
-	}
-	
-	argv = malloc(sizeof(char *) * i + 1);
+	argv = malloc(sizeof(char *) * 2);
 
 	i = 0;
 	token = strtok(buffer, delim);
