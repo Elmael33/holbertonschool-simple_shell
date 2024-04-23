@@ -14,7 +14,7 @@ char **read_line(void)
 	char *token;
 	const char *delim = "\n";
 	size_t size = 0;
-	char **argv;
+	char **argv = NULL;
 	int i = 0;
 
 	if (getline(&buffer, &size, stdin) == -1)
@@ -22,7 +22,18 @@ char **read_line(void)
 		free(buffer);
 		exit(1);
 	}
-	argv = malloc(sizeof(char *) * 2);
+	if (buffer == NULL)
+	{
+		perror("failed to store string in buffer");
+		exit(1);
+	}
+	token = strtok(buffer, delim);
+	while (token != NULL)
+	{
+		token = strtok(NULL, delim);
+		i++;
+	}
+	argv = malloc(sizeof(char *) * i + 1);
 	if (argv == NULL)
 	{
 		free(argv);
