@@ -1,26 +1,15 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
- * main - Prototype
- * Return: 0
+ * prompt - displays the prompt
  */
-char prompt(void)
+
+
+
+void prompt(void)
 {
-    size_t len = 0;
-    char *buffer = malloc(sizeof(char) * len);
-
-    while (1)
-    {
-        printf("$ ");
-        getline(&buffer, &len, stdin);
-        printf("%s", buffer);
-
-        if (getline(&buffer, &len, stdin) == -1)
-        {
-            (exit -1);
-        }
+	if (isatty(STDIN_FILENO))
+	{
+	printf("($) ");
 	}
-    return 0;
 }
+

@@ -1,11 +1,20 @@
 #include "main.h"
+/**
+ * main - main function of the shell that runs every other functions
+ * Return: 0
+ */
+
 
 int main(void)
 {
-	char **argv;
-	
-	if (argv = prompt())
+
+	while (1)
 	{
-		execute(argv);
+		char **argv = NULL;
+
+		prompt();
+		argv = read_line();
+		execute_command(argv);
 	}
+	return (0);
 }
