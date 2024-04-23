@@ -11,6 +11,7 @@ void execute_command(char **argv)
 	pid_t pid;
 	int status;
 	char *argerror = argv[0];
+	
 	pid = fork();
 
 	if (pid > 0)
@@ -23,7 +24,7 @@ void execute_command(char **argv)
 	{
 		if (isatty(STDIN_FILENO) == 0)
                 {
-                        fprintf(stderr, "./hsh: 1: %s: not found\n", argerror);
+                        fprintf(stderr, "./hsh: %d: %s: not found\n", __LINE__, argerror);
                         exit(1);
                 }
 
