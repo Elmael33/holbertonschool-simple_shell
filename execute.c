@@ -10,9 +10,8 @@ void execute_command(char **argv)
 {
 	pid_t pid;
 	int status;
-	
-	pid = fork();
 
+	pid = fork();
 	if (pid > 0)
 	{
 		wait(&status);
@@ -22,19 +21,17 @@ void execute_command(char **argv)
 	if (execve(argv[0], argv, environ) == -1)
 	{
 		if (isatty(STDIN_FILENO) == 0)
-                {
-                        fprintf(stderr, "./hsh: : : not found\n");
-                        exit(1);
-                }
+		{
+			fprintf(stderr, "./hsh: : : not found\n");
+			exit(1);
+		}
 		perror("./hsh");
 		exit(1);
 	}
 	}
-
 	else if (pid < 0)
 	{
 		perror("fork failed");
 		exit(1);
 	}
-
 }
