@@ -19,13 +19,8 @@ char **read_line(void)
 
 	if (getline(&buffer, &size, stdin) == -1)
 	{
-		if (isatty(STDIN_FILENO) == 0)
-		{
-			free(buffer);
-			exit(0);
-		}
 		free(buffer);
-		exit(0);
+		exit(1);
 	}
 	if (buffer == NULL)
 	{
