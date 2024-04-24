@@ -20,7 +20,7 @@ char **read_line(void)
 	if (getline(&buffer, &size, stdin) == -1)
 	{
 		free(buffer);
-		exit(1);
+		exit(0);
 	}
 	if (buffer == NULL)
 	{
