@@ -9,6 +9,7 @@ extern char** environ;
 void prompt(void);
 char **read_line(void);
 void execute_command(char **argv);
+char *_strcpy(char *dest, char *src);
 
 
 

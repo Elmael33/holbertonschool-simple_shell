@@ -12,24 +12,28 @@ char **read_line(void)
 {
 	char *buffer = NULL;
 	char *token;
-	const char *delim = "\n";
+	const char *delim = "\n ";
 	size_t size = 0;
 	char **argv = NULL;
 	int i = 0;
+	
 
 	if (getline(&buffer, &size, stdin) == -1)
 	{
 		free(buffer);
 		exit(0);
 	}
+	
 	if (buffer == NULL)
 	{
 		perror("failed to store string in buffer");
 		exit(1);
 	}
+	
 	token = strtok(buffer, delim);
 	while (token != NULL)
 	{
+		
 		token = strtok(NULL, delim);
 		i++;
 	}
@@ -41,6 +45,9 @@ char **read_line(void)
 		exit(1);
 	}
 	i = 0;
+	/**
+	 * printf("buffer = %s\n", buffer);
+	 */
 	token = strtok(buffer, delim);
 	while (token != NULL)
 	{
