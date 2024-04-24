@@ -12,6 +12,10 @@ int main(void)
 
 		prompt();
 		argv = read_line();
+		if (argv == NULL)
+		{
+			break;
+		}
 		execute_command(argv);
 	}
 	return (0);
