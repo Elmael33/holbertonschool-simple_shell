@@ -18,5 +18,5 @@ int main(void)
 		}
 		execute_command(argv);
 	}
-	return (0);
+	 exit(0);
 }

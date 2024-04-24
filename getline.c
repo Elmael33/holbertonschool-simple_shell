@@ -26,11 +26,6 @@ char **read_line(void)
 		exit(1);
 	}
 	
-	if (buffer == NULL)
-	{
-		perror("failed to store string in buffer");
-		exit(1);
-	}
 	
 	argv = malloc(sizeof(char *) * 2 + 1);
 	if (argv == NULL)
