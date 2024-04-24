@@ -18,6 +18,8 @@ int main(void)
 			continue;
 
 			execute_command(argv);
+			if (argv == NULL)
+			break;
 			
 		}
 	}
