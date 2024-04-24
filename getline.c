@@ -23,7 +23,7 @@ char **read_line(void)
 	if (getline(&buffer, &size, stdin) == -1)
 	{
 		free(buffer);
-		exit(0);
+		exit(1);
 	}
 	
 	if (buffer == NULL)
