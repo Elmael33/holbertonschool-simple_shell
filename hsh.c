@@ -4,17 +4,22 @@
  * Return: 0
  */
 
-
 int main(void)
 {
-
-	while (1)
 	{
-		char **argv = NULL;
-
-		prompt();
-		argv = read_line();
-		execute_command(argv);
+		while (1)
+		{
+			char **argv = NULL;
+			prompt();
+			argv = read_line();
+			
+			if (argv == NULL)
+			continue;
+			
+			execute_command(argv);
+			
+			
+		}
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
