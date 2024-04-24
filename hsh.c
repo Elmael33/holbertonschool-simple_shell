@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	int flag = 0;
+	int flag = 0, i;
 
 	while (1)
 	{
@@ -21,6 +21,9 @@ int main(void)
 			break;
 		}
 		execute_command(argv);
+		for (i = 0; argv[i]; i++)
+			free(argv[i]);
+		free(argv);
 	}
 	 exit(0);
 }
