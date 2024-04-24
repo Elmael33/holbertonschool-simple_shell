@@ -14,7 +14,7 @@ int main(void)
 			prompt();
 			argv = read_line();
 			
-			if (argv == 1)
+			if (argv == NULL)
 			continue;
 
 			execute_command(argv);
