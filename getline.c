@@ -8,7 +8,7 @@
  */
 
 
-char **read_line(void)
+char **read_line(int flag)
 {
 	char *buffer = NULL;
 	char *token;
@@ -23,11 +23,13 @@ char **read_line(void)
 	if (getline(&buffer, &size, stdin) == -1)
 	{
 		free(buffer);
+		if (isatty(STDIN_FILENO) == 0 && flag == 1)
+			exit(0);
 		exit(1);
 	}
 	
 	
-	argv = malloc(sizeof(char *) * 2 + 1);
+	argv = malloc(size);
 	if (argv == NULL)
 	{
 		free(argv);

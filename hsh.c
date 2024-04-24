@@ -6,12 +6,16 @@
 
 int main(void)
 {
+	int flag = 0;
+
 	while (1)
 	{
 		char **argv = NULL;
 
 		prompt();
-		argv = read_line();
+		argv = read_line(flag);
+		if (isatty(STDIN_FILENO) == 0)
+			flag = 1;
 		if (argv == NULL)
 		{
 			break;

@@ -7,7 +7,7 @@
 #include <sys/wait.h>
 extern char** environ;
 void prompt(void);
-char **read_line(void);
+char **read_line(int flag);
 void execute_command(char **argv);
 char *_strcpy(char *dest, char *scr);
 
