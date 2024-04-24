@@ -16,6 +16,7 @@ char **read_line(void)
 	size_t size = 0;
 	char **argv = NULL;
 	int i = 0;
+	char *strCopy = NULL;
 
 	if (getline(&buffer, &size, stdin) == -1)
 	{
@@ -35,9 +36,12 @@ char **read_line(void)
 	token = strtok(buffer, delim);
 	while (token != NULL)
 	{
+		strCopy = token;
 		token = strtok(NULL, delim);
 		i++;
 	}
+	/**printf("%s", strCopy);
+	 */
 	argv = malloc(sizeof(char *) * i + 1);
 	if (argv == NULL)
 	{
@@ -46,7 +50,7 @@ char **read_line(void)
 		exit(1);
 	}
 	i = 0;
-	token = strtok(buffer, delim);
+	token = strtok(strCopy, delim);
 	while (token != NULL)
 	{
 		argv[i] = token;
