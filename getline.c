@@ -39,7 +39,7 @@ char **read_line(void)
 		perror("malloc");
 		exit(1);
 	}
-	/**printf("buffer before strtok: %s\n", buffer);
+	/**printf(buffer before strtok: %s\n, buffer);
 	 */
 	token = strtok(buffer, delim);
 	while (token != NULL)
@@ -49,7 +49,7 @@ char **read_line(void)
 		i++;
 	}
 	argv[i] = NULL;
-	/**printf("buffer after strtok: %s\n", buffer);
+	/**printf(buffer after strtok: %s\n, buffer);
 	 */
 	return (argv);
 }
