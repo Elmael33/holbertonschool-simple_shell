@@ -41,8 +41,6 @@ char **read_line(void)
 		token = strtok(NULL, delim);
 		i++;
 	}
-	/**printf("%s", strCopy);
-	 */
 	argv = malloc(sizeof(char *) * i + 1);
 	if (argv == NULL)
 	{
@@ -52,9 +50,6 @@ char **read_line(void)
 	}
 	i = 0;
 
-	/**
-	 * printf("buffer = %s\n", buffer);
-	 */
 	token = strtok(strCopy, delim);
 	while (token != NULL)
 	{
