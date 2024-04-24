@@ -15,12 +15,9 @@ int main(void)
 			argv = read_line();
 			
 			if (argv == NULL)
-			continue;
+			break;
 
 			execute_command(argv);
-			if (argv == NULL)
-			break;
-			
 		}
 	}
 	return (EXIT_SUCCESS);
