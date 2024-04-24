@@ -6,8 +6,9 @@
 
 int main(void)
 {
+	int boucle_stop = 0;
 	{
-		while (1)
+		while (!boucle_stop)
 		{
 			char **argv = NULL;
 			prompt();
@@ -19,8 +20,8 @@ int main(void)
 			execute_command(argv);
 			if (argv == NULL)
 			break;
-
+			
 		}
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
