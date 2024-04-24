@@ -20,5 +20,5 @@ int main(void)
 			execute_command(argv);
 		}
 	}
-	return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }
