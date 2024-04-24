@@ -6,23 +6,20 @@
 
 int main(void)
 {
-	int boucle_stop = 0;
-	
+/**int i = 0;
+ */
+	while (1)
 	{
-		while (!boucle_stop)
-		{
-			char **argv = NULL;
-			prompt();
-			argv = read_line();
-			/**for (i = 0; argv[i]; i++)
-				printf("i = %i et argv[%d] = %s\n",i, i, argv[i]);
-				*/
-			
-			if (argv == NULL)
-			break;
+		char **argv = NULL;
 
-			execute_command(argv);
-		}
+		prompt();
+		argv = read_line();
+		/**while (argv[i])
+		{
+			printf("i = %i et argv[%d] = %s\n",i, i, argv[i]);
+			i++;
+		}*/
+		execute_command(argv);
 	}
-	return (EXIT_SUCCESS);
+	return (0);
 }
