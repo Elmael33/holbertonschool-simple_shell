@@ -6,22 +6,21 @@
 
 int main(void)
 {
-	int boucle_stop = 0;
 	{
-		while (!boucle_stop)
+		while (1)
 		{
 			char **argv = NULL;
 			prompt();
 			argv = read_line();
 			
-			if (argv == NULL)
+			if (argv == 1)
 			continue;
 
 			execute_command(argv);
 			if (argv == NULL)
 			break;
-			
+
 		}
 	}
-	return (EXIT_SUCCESS);
+	return (0);
 }
