@@ -6,8 +6,9 @@
 
 int main(void)
 {
+	int boucle_stop = 0;
 	{
-		while (1)
+		while (!boucle_stop)
 		{
 			char **argv = NULL;
 			prompt();
@@ -15,9 +16,8 @@ int main(void)
 			
 			if (argv == NULL)
 			continue;
-			
+
 			execute_command(argv);
-			
 			
 		}
 	}
