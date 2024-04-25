@@ -33,12 +33,29 @@ This project from Holberton School is to develop our own shell that enhances use
 
 * Command: ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh```
 
-## Examples
-* Example 1:
-* Example 2:
+## Usage and Example
+
+### Interactive Mode
+To run the simple_shell interactively, execute:
+```sh
+$ ./hsh
+```
+
+### Non-Interactive Mode
+
+You can also run the shell in non-interactive mode by redirecting commands or providing a script file.
+
+**Example 1:** Command Redirection via echo
+```sh
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c
+```
 
 ## MAN page
-Located at the root of the project. See [Man Page]()
+Located at the root of the project. See [Man Page](https://github.com/Elmael33/holbertonschool-simple_shell/blob/mael/Man_Page)
+
+## Flowchart of Simple Shell
+![flowchart](https://github.com/Elmael33/holbertonschool-simple_shell/blob/mael/flowchart-shell.png)
 
 ## Authors
 - Sofiane Slimane <8825@holbertonstudents.com>
