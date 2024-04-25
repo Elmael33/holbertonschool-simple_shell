@@ -4,34 +4,23 @@
  * Return: 0
  */
 
+
 int main(void)
 {
-	int flag = 0;
-	int i = 0;
-	char *buffer = NULL;
-
+/**int i = 0;
+ */
 	while (1)
 	{
 		char **argv = NULL;
+		char *tokenized_String = NULL;
 
 		prompt();
-		argv = read_line(flag, buffer);
-		if (isatty(STDIN_FILENO) == 0)
-			flag = 1;
-		if (argv == NULL)
-		{
-			free(argv);
-			break;
-		}
+		tokenized_String = read_line();	
+		argv = tokenize(tokenized_String);
 		execute_command(argv);
-		while (argv[i])
-		{
-			free(argv[i]);
-			i++;
-		}
 		free(argv);
-		free(buffer);
-		argv = NULL;
+		free(tokenized_String);
+
 	}
-	 exit(0);
+	return (0);
 }
