@@ -16,12 +16,7 @@ char *read_line(void)
 	if (getline(&buffer, &size, stdin) == -1)
 	{
 		free(buffer);
-		exit(1);
-	}
-	if (buffer == NULL)
-	{
-		perror("failed to store string in buffer");
-		exit(1);
+		exit(0);
 	}
 	return (buffer);
 }
