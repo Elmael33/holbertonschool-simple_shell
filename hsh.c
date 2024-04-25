@@ -12,15 +12,15 @@ int main(void)
 	while (1)
 	{
 		char **argv = NULL;
+		char *tokenized_String = NULL;
 
 		prompt();
-		argv = read_line();
-		/**while (argv[i])
-		{
-			printf("i = %i et argv[%d] = %s\n",i, i, argv[i]);
-			i++;
-		}*/
+		tokenized_String = read_line();	
+		argv = tokenize(tokenized_String);
 		execute_command(argv);
+		free(argv);
+		free(tokenized_String);
+
 	}
 	return (0);
 }
