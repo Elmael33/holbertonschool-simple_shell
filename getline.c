@@ -18,6 +18,7 @@ char *read_line(void)
 		free(buffer);
 		exit(0);
 	}
+		
 	return (buffer);
 }
 
