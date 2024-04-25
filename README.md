@@ -16,6 +16,7 @@ This project from Holberton School is to develop our own shell that enhances use
 * ```void prompt(void)``` display the prompt
 * ```char **read_line(void)``` get the size of the token
 * ```void execute_command(char **argv)``` execute the fonction 
+* ```char *_strcpy(char *dest, char *scr);
 
 
 ## Requirements
