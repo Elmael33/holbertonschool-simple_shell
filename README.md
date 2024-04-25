@@ -53,10 +53,10 @@ hsh main.c shell.c
 ```
 
 ## MAN page
-Located at the root of the project. See [Man Page](https://github.com/Elmael33/holbertonschool-simple_shell/blob/mael/Man_Page)
+Located at the root of the project. See [Man Page](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/Man_Page)
 
 ## Flowchart of Simple Shell
-![flowchart](https://github.com/Elmael33/holbertonschool-simple_shell/blob/mael/flowchart-shell.png)
+![flowchart](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/flowchart-shell.png)
 
 ## Authors
 - Sofiane Slimane <8825@holbertonstudents.com>
