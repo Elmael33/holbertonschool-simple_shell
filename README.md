@@ -16,8 +16,8 @@ This project from Holberton School is to develop our own shell that enhances use
 * ```void prompt(void)``` display the prompt
 * ```char **read_line(void)``` get the size of the token
 * ```void execute_command(char **argv)``` execute the fonction 
-* ```char *_strcpy(char *dest, char *scr)
-* ```char **tokenize(char *buffer)
+* ```char *_strcpy(char *dest, char *scr)``` copy the buffer
+* ```char **tokenize(char *buffer)``` split the string buffer into multiples arguments
 
 
 ## Requirements
@@ -59,10 +59,10 @@ hsh main.c shell.c
 ```
 
 ## MAN page
-Located at the root of the project. See [Man Page](/main/Man_Page)
+Located at the root of the project. See [Man Page](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/Man_Page)
 
 ## Flowchart of Simple Shell
-![flowchart](/main/New_flowchart.png)
+![flowchart](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/Flowchartt.png)
 
 ## Authors
 - Sofiane Slimane <8825@holbertonstudents.com>
