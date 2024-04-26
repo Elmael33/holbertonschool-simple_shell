@@ -16,7 +16,8 @@ This project from Holberton School is to develop our own shell that enhances use
 * ```void prompt(void)``` display the prompt
 * ```char **read_line(void)``` get the size of the token
 * ```void execute_command(char **argv)``` execute the fonction 
-* ```char *_strcpy(char *dest, char *scr);
+* ```char *_strcpy(char *dest, char *scr)
+* ```char **tokenize(char *buffer)
 
 
 ## Requirements
@@ -41,22 +42,27 @@ To run the simple_shell interactively, execute:
 ```sh
 $ ./hsh
 ```
+**Exemple 1:** Command to list files in current directory
+```
+$ /bin/ls
+$ hsh.c hsh.c execute.c getline.c tokenize.c main.h _strcpy.c
+```
 
 ### Non-Interactive Mode
 
 You can also run the shell in non-interactive mode by redirecting commands or providing a script file.
 
-**Example 1:** Command Redirection via echo
+**Example 1:** Command redirection via echo
 ```sh
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c
 ```
 
 ## MAN page
-Located at the root of the project. See [Man Page](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/Man_Page)
+Located at the root of the project. See [Man Page](/main/Man_Page)
 
 ## Flowchart of Simple Shell
-![flowchart](https://github.com/Elmael33/holbertonschool-simple_shell/blob/main/flowchart-shell.png)
+![flowchart](/main/New_flowchart.png)
 
 ## Authors
 - Sofiane Slimane <8825@holbertonstudents.com>

@@ -1,0 +1,50 @@
+.TH SIMPLE_SHELL 1 "25 April 2024" "1.0" "simple_shell Man_Page"
+
+.SH NAME
+simple_shell
+
+.SH SYNOPSIS
+.B simple_shell
+
+.SH DESCRIPTION
+The simple_shell program provides a basic command line interface for users to interact with a Unix-like operating system. It allows users to execute simple commands and provides a prompt for input.
+
+.SH COMMANDS
+The following commands are supported by the simple_shell program:
+
+.IP "ls"
+Lists directory contents.
+.B ./hsh
+.B /bin/ls
+hsh.c execute.c getline.c tokenize.c main.h _strcpy.c
+
+.IP "echo"
+Displays a line of text.
+.B ./hsh
+.B echo "bin/ls/"
+This will display "bin/ls/" on the terminal.
+
+.SH USAGE
+To use the simple_shell program, simply execute the following command:
+
+.IP "./hsh"
+
+.SH EXIT STATUS
+The simple_shell program will return the following exit status codes:
+
+.IP "0"
+For successful execution.
+
+.IP "1"
+For an error or failure occurrence.
+
+.IP
+In future you will be able to exit the simple shell by typing "exit". 
+Pressing Ctrl+D will also exit the shell with exit status 0.
+
+.SH AUTHORS
+Sofiane Slimane <8825@holbertonstudents.com>
+Mael Salet <8920@holbertonstudents.com> 
+
+.SH BUGS
+Please report any bugs or issues, send an email to the authors above

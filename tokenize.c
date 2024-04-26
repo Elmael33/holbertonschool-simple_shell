@@ -1,11 +1,10 @@
 #include "main.h"
 
-
-
-
-
-
-
+/**
+ * tokenize - split the string buffer into multiples argumnents(tokens)
+ * @buffer: string to be tokenize
+ * Return: (argv) array of the command
+*/
 
 char **tokenize(char *buffer)
 {
